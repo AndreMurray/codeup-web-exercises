@@ -10,8 +10,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return "Hello " + name;
+    return "Hello " + name + '!';
 }
+let trueName = sayHello('codeup');
+console.log(trueName);
 
 /**
  * TODO:
@@ -21,7 +23,7 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
  */
 let helloMessage = sayHello("Andre");
-//console.log(helloMessage);
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -56,7 +58,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(num) {
     return num === 2
 }
-//console.log(isTwo(random));
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -89,6 +91,7 @@ alert("Your bill is 20");
 let tip = prompt("What is the tip amount you want to give?");
 alert("We will calculate your tip");
 let payTip = alert(calculateTip(tip,20));
+console.log(payTip);
 
 
 

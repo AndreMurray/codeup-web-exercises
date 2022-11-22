@@ -30,7 +30,7 @@ let helloMessage = sayHello("Andre");
  * console.
  */
 let myName = "Andre Murray";
-//console.log(sayHello(myName));
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -73,9 +73,9 @@ function calculateTip(num1, num2) {
    return num1 * num2
 }
 
-//console.log(calculateTip(0.20,20));
-//console.log(calculateTip(0.25, 25.50));
-//console.log(calculateTip(0.15, 33.42));
+console.log(calculateTip(0.20,20));
+console.log(calculateTip(0.25, 25.50));
+console.log(calculateTip(0.15, 33.42));
 
 
 
@@ -107,6 +107,11 @@ let payTip = alert(calculateTip(tip,20));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(price, dis) {
-
+function applyDiscount(dis, price) {
+    let fullDiscount = price - (price * dis);
+    return fullDiscount
 }
+
+let prac = applyDiscount(.2,100);
+console.log(prac);
+

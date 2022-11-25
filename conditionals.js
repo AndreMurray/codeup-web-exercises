@@ -22,15 +22,15 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(berntColorName) {
-    if (berntColorName === "green") {
+function analyzeColor(burntColorName) {
+    if (burntColorName === "burnt orange") {
         return "This is the color of Texas"
     } else {
-        return `I dont know anything about ${berntColorName}`
+        return `I dont know anything about ${burntColorName}`
     }
 }
 
-var color1 = "Bernt Orange";
+var color1 = "Burnt Orange";
 
 var schoolColor = analyzeColor(color1);
 
@@ -49,7 +49,7 @@ console.log(notMYSchool);
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet, burnt orange'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
@@ -98,7 +98,7 @@ switch (randomColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var popUp = prompt("Chose your color my friend");
+var popUp = prompt("Choose your color my friend");
 var randomPrompt = analyzeColor(popUp);
 console.log(randomPrompt)
 
@@ -124,6 +124,25 @@ console.log(randomPrompt)
  * return value.
  */
 
+function calculateTotal(roll, fullprice) {
+    if (roll === 0) {
+       return fullprice
+    } else if (roll === 1) {
+        return fullprice - (fullprice * (10 / 100))
+    } else if (roll === 2) {
+        return fullprice - (fullprice * (25 / 100))
+    } else if (roll === 3) {
+        return fullprice - (fullprice * (35 / 100))
+    } else if (roll === 4) {
+        return fullprice - (fullprice *(50 / 100))
+    } else {
+        return "FREE!!!"
+    }
+}
+
+
+console.log(calculateTotal(5, 100))
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -133,7 +152,40 @@ console.log(randomPrompt)
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
+
+
+var yourBillPlease = prompt('Your bill please?');
+
+var realNumber = Number.parseInt(yourBillPlease);
+
+alert(`Your price before the discount was ${realNumber}`);
+
+var luckyNumber = Math.floor(Math.random() * 6);
+
+alert(`Your lucky number was ${luckyNumber}`);
+
+
+
+var costomerService = calculateTotal(luckyNumber, realNumber);
+
+alert(`Your price with discount is now.... ${costomerService} !!!`);
+function calculateTotal(roll, fullprice) {
+    if (roll === 0) {
+        return ` Aww..How unlucky, you still pay ${fullprice}.`
+    } else if (roll === 1) {
+        return fullprice - (fullprice * (10 / fullprice));
+    } else if (roll === 2) {
+        return fullprice - (fullprice * (25 / fullprice));
+    } else if (roll === 3) {
+        return fullprice - (fullprice * (35 / fullprice));
+    } else if (roll === 4) {
+        return fullprice - (fullprice *(50 / fullprice));
+    } else {
+        return "FREE!!!";
+    }
+}
+
 
 /**
  * TODO:
@@ -153,3 +205,31 @@ console.log(randomPrompt)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+if (confirm("Would you like to enter a number?") === true) {
+    var numberGames = prompt("Enter any number you like.");
+    if (numberGames !== typeof "Number") {
+        alert(`${numberGames} is the incorrect input data type.`)
+    }
+    if (Number.parseInt(numberGames) % 2 === 0) {
+        alert("This is an even number")
+} else {
+        alert("This is an odd number")
+    }
+
+    alert(numberGames + " plus 100 is " + (parseInt(numberGames) + 100));
+    if(numberGames < 0) {
+        alert("Your number is negative")
+    } else {
+        alert("Your number is positive")
+    }
+
+
+}
+
+
+
+
+
+
+

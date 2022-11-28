@@ -58,7 +58,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 var randomColorCheck = (analyzeColor(randomColor));
 
-//console.log(randomColorCheck);
+console.log(randomColorCheck);
 
 /**
  * TODO:
@@ -98,9 +98,9 @@ switch (randomColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var popUp = prompt("Choose your color my friend");
-var randomPrompt = analyzeColor(popUp);
-console.log(randomPrompt)
+// var popUp = prompt("Choose your color my friend");
+// var randomPrompt = analyzeColor(popUp);
+// console.log(randomPrompt)
 
 /* ########################################################################## */
 
@@ -141,7 +141,7 @@ function calculateTotal(roll, fullprice) {
 }
 
 
-console.log(calculateTotal(5, 100))
+// console.log(calculateTotal(5, 100))
 
 /**
  * TODO:
@@ -205,26 +205,56 @@ function calculateTotal(roll, fullprice) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+playGame();
+function playGame() {
+    if (confirm("Would you like to enter a number?") === true) {
+        var numberGames = prompt("Enter any number you like.");
+       if (isNumber(numberGames)) {
+           alert(`${numberGames} is the incorrect input data type.`)
+       } else {
 
-if (confirm("Would you like to enter a number?") === true) {
-    var numberGames = prompt("Enter any number you like.");
-    if (numberGames !== typeof "Number") {
-        alert(`${numberGames} is the incorrect input data type.`)
-    }
-    if (Number.parseInt(numberGames) % 2 === 0) {
-        alert("This is an even number")
-} else {
-        alert("This is an odd number")
+           if ( isEven(numberGames) ) {
+               alert("This is an even number");
+           } else {
+               alert("This is an odd number");
+           }
+           alert(numberGames + " plus 100 is " + addNumber(numberGames));
+           if (numberGames < 0) {
+               alert("Your number is negative")
+           } else {
+               alert("Your number is positive")
+           }
+
+
+       }
     }
 
-    alert(numberGames + " plus 100 is " + (parseInt(numberGames) + 100));
-    if(numberGames < 0) {
-        alert("Your number is negative")
+    }
+
+
+
+
+
+    function isNumber(num) {
+            if (isNaN(num)) {
+                return  true
+            } else {
+             return   false
+            }
+        }
+
+
+
+function isEven(num) {
+    if (Number.parseInt(num) % 2 === 0) {
+        return true;
     } else {
-        alert("Your number is positive")
+        return false;
     }
+}
 
-
+function addNumber(num) {
+    return (parseFloat(num) + 100);
 }
 
 

@@ -23,10 +23,11 @@
  */
 
 function analyzeColor(burntColorName) {
-    if (burntColorName === "burnt orange") {
+    let longhorn = burntColorName.toLowerCase()
+    if (longhorn === "burnt orange") {
         return "This is the color of Texas"
     } else {
-        return `I dont know anything about ${burntColorName}`
+        return `I dont know anything about ${longhorn}`
     }
 }
 
@@ -66,28 +67,33 @@ console.log(randomColorCheck);
  */
 
 switch (randomColor) {
-    case 'red':
-        console.log("red");
-        break;
-    case "orange":
-        console.log("orange");
-    break;
-    case 'yellow':
-        console.log('yellow');
-        break;
-    case 'green':
-        console.log('green');
-    break;
-    case 'blue':
-        console.log('blue');
-    break;
-    case 'indigo':
-        console.log('indigo');
-    case 'violet':
-        console.log('violet')
-        break;
+    let
+        lowerColor1 = randomColor.toLowerCase();
+        switch (lowerColor1) {
+            case 'red':
+                return = "red";
+                break;
+            case "orange":
+                return = "orange";
+                break;
+            case 'yellow':
+                return = 'yellow';
+                break;
+            case 'green':
+                return = 'green';
+                break;
+            case 'blue':
+                return = 'blue';
+                break;
+            case 'indigo':
+                return = 'indigo';
+            case 'violet':
+                return = 'violet'
+                break;
 
 
+        }
+            return lowerColor1
 }
 
 
@@ -98,9 +104,9 @@ switch (randomColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// var popUp = prompt("Choose your color my friend");
-// var randomPrompt = analyzeColor(popUp);
-// console.log(randomPrompt)
+var popUp = prompt("Choose your color my friend");
+var randomPrompt = analyzeColor(popUp);
+console.log(randomPrompt)
 
 /* ########################################################################## */
 
@@ -125,6 +131,9 @@ switch (randomColor) {
  */
 
 function calculateTotal(roll, fullprice) {
+    if (isNaN(fullprice)) {
+        return "This is not a number"
+    }
     if (roll === 0) {
        return fullprice
     } else if (roll === 1) {
@@ -159,7 +168,7 @@ var yourBillPlease = prompt('Your bill please?');
 
 var realNumber = Number.parseInt(yourBillPlease);
 
-alert(`Your price before the discount was ${realNumber}`);
+alert(`Your price before the discount was $${realNumber}`);
 
 var luckyNumber = Math.floor(Math.random() * 6);
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let petDog = {
+  name: "Daisy",
+  currentTitle: "pupper",
+  futurePosition: "doggo"
+}
+
+
+
+let valueOFName = petDog.currentTitle;
+console.log(valueOFName);
+
+
+let user = {
+  id: 4,
+  name: "John Doe",
+  occupation:"Cop"
+}
+
+function theObjectFunction(obj) {
+  return obj;
+}
+
+function theObjectKeys(obj , key2) {
+  return obj[key2];
+}
+
+
+// console.log(theObjectFunction(user));
+// console.log(theObjectKeys(petDog , name ))
+function determineISAnArray(input) {
+    let isAnArray = Array.isArray(input);
+    return isAnArray
+
+}
+
+let yesOrNo = determineISAnArray("the");
+let NoOrYes = determineISAnArray([2,3,4]);
+
+console.log(yesOrNo);
+console.log(NoOrYes);
+
+function returnObject(object) {
+    return object
+}
+
+function returnObjKey(obj, key) {
+    return obj[key];
+}
+
+function creatObj() {
+    let smallObj = {
+        key1:""
+    }
+    return smallObj
+}
+function eitherAreTrue(bool1, bool2) {
+    return bool1, bool2
+}
+
+function bothAreTrue(bool1, bool2) {
+    return bool1 && bool2
+}
+function combination (per1, per2, per3) {
+    return per1 && (per2 || per3);
+}
+
+
+function areEqual(num1, num3) {
+    return num1 === num3
+}
+
+var power = 2 ** 5;
+console.log('power:', power);
+
+</script>
+
+</body>
+</html>

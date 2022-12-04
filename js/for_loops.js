@@ -6,11 +6,11 @@
 // For example, showMultiplicationTable(7) should output
 // function showMultiplicationTable(num) {
 
-//     for (let i = 1 ; i < 10; i++) {
-//     console.log(`${num} * ${i} = ${num * i}`)
-//     }
-//
-// }
+    for (let i = 1 ; i < 10; i++) {
+    console.log(`${num} * ${i} = ${num * i}`)
+    }
+
+
 // let MultiQuest = showMultiplicationTable(7);
 // console.log(MultiQuest)
 
@@ -28,13 +28,13 @@
 // 7 x 10 = 70
 // Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:
 // for (let i = 0; i < 10; i++) {
-//     let realMath = Math.floor(Math.random()*(200 - 20 + 1) + 20);
-//     if(realMath % 2 === 0) {
-//         console.log(`${realMath} is even`)
-//     } else {
-//         console.log(`${realMath} is odd`)
-//     }
-// }
+    let realMath = Math.floor(Math.random()*(200 - 20 + 1) + 20);
+    if(realMath % 2 === 0) {
+        console.log(`${realMath} is even`)
+    } else {
+        console.log(`${realMath} is odd`)
+    }
+}
 //
 //     123 is odd
 // 80 is even
@@ -42,9 +42,9 @@
 // 199 is odd
 // ...
 // Create a for loop that uses console.log to create the output shown below.
-// for(let i = 0; i <= 9; i++) {
-//     let answer = String(i).repeat(i);
-//     console.log(answer)
+for(let i = 0; i <= 9; i++) {
+    let answer = String(i).repeat(i);
+    console.log(answer)
 // }
 //
 // 1
@@ -57,11 +57,11 @@
 // 88888888
 // 999999999
 // Create a for loop that uses console.log to create the output shown below.
-// for (let i = 100; i > 0; i--) {
-//     if (i % 5 === 0) {
-//         console.log(i)
-//     }
-// }
+for (let i = 100; i > 0; i--) {
+    if (i % 5 === 0) {
+        console.log(i)
+    }
+}
 //
 //
 // 100
@@ -89,21 +89,21 @@
 //     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 //     Your output should look like this:
-// let oddNum = prompt("Pick a number between 1 and 50.");
-// oddNum = parseInt(oddNum)
-//
-//     for (let i = 1; i <= 50; i+=2) {
-//         if (typeof oddNum !== "number" || isNaN(oddNum)) {
-//             alert(`enter the correct data type`)
-//             break;
-//         } else if ( typeof oddNum === "number" && oddNum === i && i % 2 === 1) {
-//             console.log(`Not the number we want: ${i}`)
-//             continue;
-//         } else {
-//             console.log(`Here is an odd number ${i}`)
-//
-//         }
-//     }
+let oddNum = prompt("Pick a number between 1 and 50.");
+oddNum = parseInt(oddNum)
+
+    for (let i = 1; i <= 50; i+=2) {
+        if (typeof oddNum !== "number" || isNaN(oddNum)) {
+            alert(`enter the correct data type`)
+            break;
+        } else if ( typeof oddNum === "number" && oddNum === i && i % 2 === 1) {
+            console.log(`Not the number we want: ${i}`)
+            continue;
+        } else {
+            console.log(`Here is an odd number ${i}`)
+
+        }
+    }
 
 
 //

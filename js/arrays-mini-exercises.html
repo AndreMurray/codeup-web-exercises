@@ -20,9 +20,97 @@
   //     }
 
   let goodFoods = ["chips", "pizza", "apple", "taco", "chicken", "soup", "candy", "orange", "Gumbo", "Thai food"];
-  function vowelFoods(array) {
+  /*
+    1. Create an array the string elements 'April', 'May', 'June'
+    2. Add 'July' in the correct place of the array
+    3. Add 'March' in the correct place of the array
+    4. July is too hot; remove it from the array.
+    Console log the result and verify you get ['March', 'April', 'May', 'June']
+ */
 
+  let month = ['April', 'May', 'June'];
+  let addMonth = 'July';
+  let addMonth2 = 'March';
+  month.push(addMonth);
+  month.unshift(addMonth2);
+  let remove = month.pop()
+  //console.log(month);
+
+  /*
+    1. Put the first names of everyone in your row in the order they are sitting (just your half of the classroom)
+    2. Log the alphabetical order of everyone in your row
+    3. Log the reverse alphabetical order of everyone in your row
+    4. Log everyone in the row in reverse order
+    5. Log an array of just the first two students in the row (left to right)
+    6. Log everyone in the row in a single string separated by spaces
+    7. Log everyone in the row in a single string separated by underscores
+ */
+let rowList = ["Andre","John", "Will", "Chris"];
+
+  console.log(rowList.sort())
+  let sortedArray = rowList
+  console.log(sortedArray.reverse())
+  let firstTwoStudents = sortedArray.slice(0,2);
+  // console.log(firstTwoStudents);
+  // console.log(rowList.join(" "));
+  // console.log(rowList.join("_"));
+
+  // Create a few beverage objects and assign values to each object for the following properties:
+  //     - brandName
+  //     - type
+  //     - volumeInLiters
+  //     - priceInCents
+  //     - expirationDate
+  //     - datesOfPreviousSips (use an array of strings)
+  // - isOpen
+  // Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+
+  // let beverage = {
+  //     brandName: "Dr.pip",
+  //     type:"brown cola",
+  //     volumeInLiters:"1",
+  //     priveInCents:"35",
+  //     expirationDate:"12/25/99",
+  //     datesOfPreviousSips:["1/10/89", "2/20/89", "6/01/89", "1/01/99"],
+  //     isOpen:true
+  // }
+  //
+  // console.log(beverage.brandName)
+  // console.log(beverage["type"])
+
+  const users = [
+      {
+          givenName: 'Sam',
+      age: 21
+  },
+  {
+      givenName: 'Cathy',
+      age: 34
+  },
+  {
+      givenName: 'Karen',
+      age: 43
   }
+  ]
+//   0. Log each given name
+//   for (let i = 0 ; i < users.length; i++) {
+//       console.log(users[i].givenName)
+//   }
+//   1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+  let newArray = [];
+  for (let i = 0 ; i < users.length; i++) {
+      newArray.push(users[i].givenName)
+    // let newString = newArray.join(" ")
+    //    console.log(newString)
+  }
+  let newString = newArray.join(" ")
+  console.log(newString)
+
+//   2. Change the names of all users to “John Doe”
+// 3. Increase the current age of all users by 1
+//   Can you accomplish each step using iteration?
+//
+//   }
 
 </script>
 

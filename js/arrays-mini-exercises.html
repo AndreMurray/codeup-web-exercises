@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+    "use strict"
   let classArray = ["Leonard", "Chase", "Chris"]
   // console.log("first classmate:", classArray[0]);
   // console.log("second classmate:", classArray[1]);
@@ -47,9 +48,9 @@
  */
 let rowList = ["Andre","John", "Will", "Chris"];
 
-  console.log(rowList.sort())
+ // console.log(rowList.sort())
   let sortedArray = rowList
-  console.log(sortedArray.reverse())
+  //console.log(sortedArray.reverse())
   let firstTwoStudents = sortedArray.slice(0,2);
   // console.log(firstTwoStudents);
   // console.log(rowList.join(" "));
@@ -88,7 +89,7 @@ let rowList = ["Andre","John", "Will", "Chris"];
       age: 34
   },
   {
-      givenName: 'Karen',
+      givenName: 'Karenjune',
       age: 43
   }
   ]
@@ -96,21 +97,63 @@ let rowList = ["Andre","John", "Will", "Chris"];
 //   for (let i = 0 ; i < users.length; i++) {
 //       console.log(users[i].givenName)
 //   }
-//   1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
-  let newArray = [];
-  for (let i = 0 ; i < users.length; i++) {
-      newArray.push(users[i].givenName)
-    // let newString = newArray.join(" ")
-    //    console.log(newString)
-  }
-  let newString = newArray.join(" ")
-  console.log(newString)
+ // 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+//   let newArray = [];
+//   for (let i = 0 ; i < users.length; i++) {
+//       newArray.push(users[i].givenName)
+//    // let newString = newArray.join(" ")
+//        //console.log(newString)
+//   }
+//
+//   let newString = newArray.join(" ")
+//   console.log(newString)
+//
+// //   2. Change the names of all users to “John Doe”
+//
+//   for (let i = 0 ; i < users.length; i++) {
+//       users[i].givenName = "John Doe"
+//       // let newString = newArray.join(" ")
+//       console.log(users[i].givenName)
+//   }
+//   console.log(users)
 
-//   2. Change the names of all users to “John Doe”
+
+
 // 3. Increase the current age of all users by 1
 //   Can you accomplish each step using iteration?
 //
 //   }
+//   for (let i = 0 ; i < users.length; i++) {
+//       users[i].age+=1
+//       // let newString = newArray.join(" ")
+//       //console.log(users[i].age)
+//   }
+//   let longestName = users[0].givenName
+// for(let i = 0; i < users.length; i++) {
+//     if(longestName.length < users[i].givenName.length) {
+//         longestName = users[i].givenName
+//     }
+//     // console.log(longestName)
+// }
+//
+//     console.log(longestName)
+const dog = {
+      petName: 'Sparky',
+      age:4,
+      bark: function() {
+          console.log("woof woof!");
+      },
+      eat: function(food) {
+          console.log(";dog is eating... " + food);
+      },
+      agePet: function() {
+          this.age+=1
+      }
+}
+
+dog.bark()
+    dog.eat("snacks")
+
 
 </script>
 

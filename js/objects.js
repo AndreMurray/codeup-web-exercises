@@ -1,4 +1,4 @@
-'use strict'
+
 
 (function() {
     "use strict";
@@ -13,7 +13,16 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    const person = {
+        firstName: "Andre",
+        lastName: "Murray",
+        sayHello: function(first, last) {
+            console.log("Hello " + this.firstName + ' ' + this.lastName + '.');
+        },
 
+    }
+   // console.log(person.firstName);
+   // console.log(person.lastName);
 
     /**
      * TODO:
@@ -24,6 +33,8 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello()
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -39,11 +50,32 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180 , discount: 0, amountToPay: function (pay,discount) {
+              return  (this.amount * this.discount) - this.amount
+            } },
+        {name: 'Ryan', amount: 250, discount: .12, amountToPay1: function (pay,discount) {
+                return  (this.amount * this.discount) - this.amount
+            }},
+        {name: 'George', amount: 320, discount: .12, amountToPay2: function (pay, discount) {
+                return  (this.amount * this.discount) - this.amount
+            }}
+    ];
+
+    shoppers.forEach( function(shopper) {
+    if(shopper.amount > 200) {
+        let discount = shopper.amount - (shopper.amount * .12);
+        console.log(`${shopper.name} will pay ${shopper.amount} before the discount, the discount is % 12, and will now pay ${discount}`)
+
+    } else {
+        console.log()
+    }
+
+
+
+    })
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a

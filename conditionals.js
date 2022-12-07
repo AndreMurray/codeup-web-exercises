@@ -104,7 +104,7 @@ switch (randomColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var popUp = prompt("Choose your color my friend");
+var popUp = prompt("Choose your color my friend.");
 var randomPrompt = analyzeColor(popUp);
 console.log(randomPrompt)
 

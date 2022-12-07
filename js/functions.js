@@ -72,7 +72,7 @@ console.log(sayHello(myName));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(tipOfMeal, totalAmountOfMeal) {
-    let conversionOfTip = tipOfMeal / 100; // 0.20, 0.25, 0.50
+    let conversionOfTip = tipOfMeal / 100;  //0.20, 0.25, 0.50
     let answer = conversionOfTip * totalAmountOfMeal; // 0.20 * 200
     return answer
 }
@@ -96,11 +96,11 @@ console.log(calculateTip(15, 33.42));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// alert("Your bill is 20");
-// let tip = prompt("What is the tip amount you want to give?");
-// alert("We will calculate your tip");
-// let payTip = alert(calculateTip(tip,20));
-// console.log(payTip);
+alert("Your bill is 20");
+let tip = prompt("What is the tip amount you want to give?");
+alert("We will calculate your tip");
+let payTip = alert(calculateTip(tip,20));
+console.log(payTip);
 
 const userBill = prompt("What is the total to your bill?"); // returns string
 const userTip = prompt("how much of a tip do you want to leave?") // returns a string

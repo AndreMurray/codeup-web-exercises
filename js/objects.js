@@ -68,7 +68,7 @@
         console.log(`${shopper.name} will pay ${shopper.amount} before the discount, the discount is % 12, and will now pay ${discount}`)
 
     } else {
-        console.log()
+        con
     }
 
 

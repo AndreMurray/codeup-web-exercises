@@ -15,14 +15,14 @@
      */
     const person = {
         firstName: "Andre",
-        lastName: "Murray",
-        sayHello: function(first, last) {
-           // console.log("Hello " + this.firstName + ' ' + this.lastName + '.');
-        },
+        lastName: "Murray"
+
 
     }
-   // console.log(person.firstName);
-   // console.log(person.lastName);
+    person.sayHello = function(first, last) {
+        return ("Hello " + this.firstName + ' ' + this.lastName + '.');
+    }
+    console.log(person.sayHello())
 
     /**
      * TODO:
@@ -33,7 +33,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    person.sayHello()
+
 
 
     /** TODO:
@@ -64,11 +64,11 @@
 
     shoppers.forEach( function(shopper) {
     if(shopper.amount > 200) {
-        let discount = shopper.amount - (shopper.amount * .12);
-       // console.log(`${shopper.name} will pay ${shopper.amount} before the discount, the discount is % 12, and will now pay ${discount}`)
+        let discount = parseFloat(shopper.amount - (shopper.amount * .12));
+        //console.log(`${shopper.name} will pay $${shopper.amount} before the discount, with the discount of % 12, ${shopper.name} will now pay $${discount}`)
 
     } else {
-      //  console.log(`${shopper.name} will pay full price ${shopper.amount}`)
+        //console.log(`${shopper.name} will pay full price ${shopper.amount}`)
     }
 
 
@@ -93,17 +93,20 @@
     let books = [
         {title: "Harry Potter",
         author: {firstName: "J.K",
-        lastName: "Rowling"},
+                 lastName: "Rowling"},
         },
         {title: "It",
-        author: {firstName: "Stephen",
-        lastName: "King"}},
+        author: {
+                firstName: "Stephen",
+                lastName: "King"}},
         {title: "The Exorcist",
-        author:{firstName: "William",
-        lastName: "Blatty"}},
+        author:{
+                firstName: "William",
+                lastName: "Blatty"}},
         {title: "The Phantom of the Oera",
-        author: {firstName: "Gaston",
-        lastName: "Leroux"}},
+        author: {
+                firstName: "Gaston",
+                lastName: "Leroux"}},
         {title: "Clifford",
         author: {
             firstName: "Norman",
@@ -139,9 +142,18 @@
      *      ---
      *      ...
      */
-    console.log("Book # 1\n" + books[0].title + '\n ' + books[0].author.firstName + "\n" + books[0].author.lastName);
-    console.log("Book # 1\n" + books[1].title + '\n ' + books[1].author.firstName + " \n" + books[1].author.lastName);
-    console.log("Book # 1\n" + books[2].title + '\n ' + books[2].author.firstName + " \n" + books[2].author.lastName);
+
+    books.forEach( function (book,index) {
+        let bookNumber = index + 1;
+        let fullName = `${book.author.firstName} ${book.author.lastName}`;
+        let message = `Book #${bookNumber}\nTitle: ${book.title}\nAuthor:${fullName}\n---`
+        //console.log(message)
+
+    })
+
+    //console.log("Book # 1\n" + books[0].title + '\n ' + books[0].author.firstName + "\n" + books[0].author.lastName);
+    //console.log("Book # 1\n" + books[1].title + '\n ' + books[1].author.firstName + " \n" + books[1].author.lastName);
+    //console.log("Book # 1\n" + books[2].title + '\n ' + books[2].author.firstName + " \n" + books[2].author.lastName);
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -152,5 +164,27 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(title, author) {
+        let authorArray = author.split(' ');
+        let bookObject = {
+            title: title,
+            author: {
+                firstName: authorArray[0],
+                lastName: authorArray[1]
+            },
+        }
+        return bookObject
+    }
+
+    let book2 = [
+        createBook("Harry Potter", "J.K Rowling"),
+        createBook("It", "Stephen King"),
+        createBook("The Exorcist", "William Blatty"),
+        createBook("The Phantom of the Oera", "Gaston Leroux"),
+        createBook("Clifford", "Norman Bridwell")
+    ];
+
+    console.log(book2)
+
 
 })();

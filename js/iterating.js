@@ -15,7 +15,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log(names.length);
+    //console.log(names.length);
 
     /**
      * TODO:
@@ -23,7 +23,7 @@
      * accessing each element's index.
      */
 
-    console.log(names[0],names[1],names[2],names[3]);
+  //  console.log(names[0],names[1],names[2],names[3]);
 
     /**
      * TODO:
@@ -31,13 +31,16 @@
      * array.
      */
     for(let i = 0; i <names.length; i++) {
-        console.log(names[i])
+       // console.log(names[i])
     }
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+    names.forEach( function(name) {
+        console.log(name)
+    })
 
 
     /**

@@ -21,15 +21,15 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
-function analyzeColor(burntColorName) {
-    let longhorn = burntColorName.toLowerCase()
-    if (longhorn === "burnt orange") {
-        return "This is the color of Texas"
-    } else {
-        return `I dont know anything about ${longhorn}`
-    }
-}
+//
+// function analyzeColor(burntColorName) {
+//     let longhorn = burntColorName.toLowerCase()
+//     if (longhorn === "burnt orange") {
+//         return "This is the color of Texas"
+//     } else {
+//         return `I dont know anything about ${longhorn}`
+//     }
+// }
 
 var color1 = "Burnt Orange";
 
@@ -65,36 +65,33 @@ console.log(randomColorCheck);
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
-switch (randomColor) {
-    let
-        lowerColor1 = randomColor.toLowerCase();
-        switch (lowerColor1) {
+et theColoOfTexas = randomColor.toLowerCase();
+        switch (theColoOfTexas) {
             case 'red':
-                return = "red";
+                color = "the ball is red";
                 break;
-            case "orange":
-                return = "orange";
+            case " Burnt Orange":
+                color = "orange is Bearkat orange";
                 break;
             case 'yellow':
-                return = 'yellow';
+                color = '...and yellow kill a fellow';
                 break;
             case 'green':
-                return = 'green';
+                color = 'eat them alll the time';
                 break;
             case 'blue':
-                return = 'blue';
+                color = 'Im not blue right now';
                 break;
             case 'indigo':
-                return = 'indigo';
+                color = 'indigo';
             case 'violet':
-                return = 'violet'
-                break;
+                color = 'violet'
+
 
 
         }
-            return lowerColor1
-}
+
+
 
 
 

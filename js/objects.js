@@ -17,7 +17,7 @@
         firstName: "Andre",
         lastName: "Murray",
         sayHello: function(first, last) {
-            console.log("Hello " + this.firstName + ' ' + this.lastName + '.');
+           // console.log("Hello " + this.firstName + ' ' + this.lastName + '.');
         },
 
     }
@@ -65,10 +65,10 @@
     shoppers.forEach( function(shopper) {
     if(shopper.amount > 200) {
         let discount = shopper.amount - (shopper.amount * .12);
-        console.log(`${shopper.name} will pay ${shopper.amount} before the discount, the discount is % 12, and will now pay ${discount}`)
+       // console.log(`${shopper.name} will pay ${shopper.amount} before the discount, the discount is % 12, and will now pay ${discount}`)
 
     } else {
-        con
+      //  console.log(`${shopper.name} will pay full price ${shopper.amount}`)
     }
 
 
@@ -89,6 +89,31 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+        {title: "Harry Potter",
+        author: {firstName: "J.K",
+        lastName: "Rowling"},
+        },
+        {title: "It",
+        author: {firstName: "Stephen",
+        lastName: "King"}},
+        {title: "The Exorcist",
+        author:{firstName: "William",
+        lastName: "Blatty"}},
+        {title: "The Phantom of the Oera",
+        author: {firstName: "Gaston",
+        lastName: "Leroux"}},
+        {title: "Clifford",
+        author: {
+            firstName: "Norman",
+            lastName: "Bridwell"
+        }}
+    ]
+
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -114,7 +139,9 @@
      *      ---
      *      ...
      */
-
+    console.log("Book # 1\n" + books[0].title + '\n ' + books[0].author.firstName + "\n" + books[0].author.lastName);
+    console.log("Book # 1\n" + books[1].title + '\n ' + books[1].author.firstName + " \n" + books[1].author.lastName);
+    console.log("Book # 1\n" + books[2].title + '\n ' + books[2].author.firstName + " \n" + books[2].author.lastName);
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

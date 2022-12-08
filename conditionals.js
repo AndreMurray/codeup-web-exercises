@@ -65,7 +65,7 @@ console.log(randomColorCheck);
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-et theColoOfTexas = randomColor.toLowerCase();
+let theColoOfTexas = randomColor.toLowerCase();
         switch (theColoOfTexas) {
             case 'red':
                 color = "the ball is red";
@@ -77,7 +77,7 @@ et theColoOfTexas = randomColor.toLowerCase();
                 color = '...and yellow kill a fellow';
                 break;
             case 'green':
-                color = 'eat them alll the time';
+                color = 'eat them all the time';
                 break;
             case 'blue':
                 color = 'Im not blue right now';

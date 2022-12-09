@@ -2,7 +2,7 @@
 (function(){
     "use strict";
 
-    let planets = [
+    const planets = [
         'Mercury',
         'Venus',
         'Earth',

@@ -7,7 +7,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    let names = ["Jude", "James", "Tom", "Grace"];
+    const names = ["Jude", "James", "Tom", "Grace"];
 
 
     /**

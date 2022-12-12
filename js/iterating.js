@@ -39,7 +39,7 @@
      * Refactor your above code to use a `forEach` loop
      */
     names.forEach( function(name) {
-        console.log(name)
+        console.log(name);
     })
 
 

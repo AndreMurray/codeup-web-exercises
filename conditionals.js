@@ -41,7 +41,7 @@ var color2 = "red";
 
 var notMYSchool = analyzeColor(color2);
 
-console.log(notMYSchool);
+console.log(notMYSchool)
 
 
 

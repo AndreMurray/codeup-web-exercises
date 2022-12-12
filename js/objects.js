@@ -22,7 +22,7 @@
     person.sayHello = function(first, last) {
         return ("Hello " + this.firstName + ' ' + this.lastName + '.');
     }
-    console.log(person.sayHello())
+    console.log(person.sayHello());
 
     /**
      * TODO:

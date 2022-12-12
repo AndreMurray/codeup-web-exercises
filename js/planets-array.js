@@ -52,5 +52,5 @@ console.log(planets);
 //     console.log("Sorting the planets array.");
 //     console.log(planets);
     console.log("Sort the reversing array:", planets.sort())
-    console.log(planets)
+    console.log(planets);
 })();

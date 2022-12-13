@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Register With Us</h1>
-<form method="Post" action="https://request-inspector.glitch.me/">
+<form method="Get" action="https://request-inspector.glitch.me/">
 	<div>
 		<label for="userName">Email</label>
 		<input id="userName" name="userName" type="email" placeholder="Enter Email">
@@ -16,24 +16,33 @@
 		<label for="password">Password</label>
 		<input id="password" name="password" type="password" placeholder="password">
 
-		<input type="submit">
-
 	</div>
 
 	<textarea name="bio" id="" cols="30" rows="10" placeholder="Enter bio"></textarea>
 
 	<p>How did you hear about us?</p>
 	<div><label for="billboard">Billboard</label>
-		<input id="billboard" name="referral" type="radio" value="billboard">
+		<input id="billboard" name="referral1" type="radio" value="billboard">
 	</div>
 	<div><label for="Radio Advertisement">Radio Advertisement</label>
-		<input id="Radio Advertisement" name="referral" type="radio" value="Radio Advertisement">
+		<input id="Radio Advertisement" name="referral2" type="radio" value="Radio Advertisement">
 	</div>
 	<div>	<label for="Internet advertisement">Internet advertisment</label>
-		<input id="Internet advertisement" name="referral" type="radio" value="Internet advertisement">
+		<input id="Internet advertisement" name="referral3" type="radio" value="Internet advertisement">
 	</div>
 	<div><label for="other">other</label>
-		<input id="other" name="referral" type="radio">
+		<input id="other" name="referral4" type="radio">
+	</div>
+
+	<div>
+		<select name="What web browser are using? ">
+			<option value="chrome">Chrome</option>
+			<option value="Fire Fox">Fire Fox</option>
+			<option value="Bing">Bing</option>
+		</select>
+
+			<input type="submit">
+
 	</div>
 
 

@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+}
+
+.fancy-header {
+    color: #8000ff; /* single line comment */
+    text-decoration: underline;
+}
+
+.section-header {
+    color:blue;
+}

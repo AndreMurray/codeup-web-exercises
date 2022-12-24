@@ -28,14 +28,14 @@
     4. July is too hot; remove it from the array.
     Console log the result and verify you get ['March', 'April', 'May', 'June']
  */
-
-  let month = ['April', 'May', 'June'];
-  let addMonth = 'July';
-  let addMonth2 = 'March';
-  month.push(addMonth);
-  month.unshift(addMonth2);
-  let remove = month.pop()
-<!--  //console.log(month);-->
+//
+//   let month = ['April', 'May', 'June'];
+//   let addMonth = 'July';
+//   let addMonth2 = 'March';
+//   month.push(addMonth);
+//   month.unshift(addMonth2);
+//   let remove = month.pop()
+// <!--  //console.log(month);-->
 
   /*
     1. Put the first names of everyone in your row in the order they are sitting (just your half of the classroom)
@@ -46,25 +46,25 @@
     6. Log everyone in the row in a single string separated by spaces
     7. Log everyone in the row in a single string separated by underscores
  */
-let rowList = ["Andre","John", "Will", "Chris"];
-
- // console.log(rowList.sort())
-  let sortedArray = rowList
-  //console.log(sortedArray.reverse())
-  let firstTwoStudents = sortedArray.slice(0,2);
-  console.log(firstTwoStudents);
-  console.log(rowList.join(" "));
-  console.log(rowList.join("_"));
+// let rowList = ["Andre","John", "Will", "Chris"];
+//
+//  // console.log(rowList.sort())
+//   let sortedArray = rowList
+//   //console.log(sortedArray.reverse())
+//   let firstTwoStudents = sortedArray.slice(0,2);
+//   console.log(firstTwoStudents);
+//   console.log(rowList.join(" "));
+//   console.log(rowList.join("_"));
 
   // Create a few beverage objects and assign values to each object for the following properties:
-      - brandName
-      - type
-      - volumeInLiters
-      - priceInCents
-      - expirationDate
-      - datesOfPreviousSips (use an array of strings)
-  - isOpen
-  Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+  //     - brandName
+  //     - type
+  //     - volumeInLiters
+  //     - priceInCents
+  //     - expirationDate
+  //     - datesOfPreviousSips (use an array of strings)
+  // - isOpen
+  // Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
 
   let beverage = {
       brandName: "Dr.pip",
@@ -75,24 +75,24 @@ let rowList = ["Andre","John", "Will", "Chris"];
       datesOfPreviousSips:["1/10/89", "2/20/89", "6/01/89", "1/01/99"],
       isOpen:true
   }
-
-  console.log(beverage.brandName)
-  console.log(beverage["type"])
-
-  const users = [
-      {
-          givenName: 'Sam',
-      age: 21
-  },
-  {
-      givenName: 'Cathy',
-      age: 34
-  },
-  {
-      givenName: 'Karenjune',
-      age: 43
-  }
-  ]
+  //
+  // console.log(beverage.brandName)
+  // console.log(beverage["type"])
+  //
+  // const users = [
+  //     {
+  //         givenName: 'Sam',
+  //     age: 21
+  // },
+  // {
+  //     givenName: 'Cathy',
+  //     age: 34
+  // },
+  // {
+  //     givenName: 'Karenjune',
+  //     age: 43
+  // }
+  // ]
 //   0. Log each given name
 //   for (let i = 0 ; i < users.length; i++) {
 //       console.log(users[i].givenName)
@@ -242,50 +242,76 @@ let rowList = ["Andre","John", "Will", "Chris"];
 
 
 // Create a function, returnLongestPetName, that takes in a array of pet objects and returns a string of the longest name for a pet.
+//
+//         const pets = [
+//     {
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Beans',
+//         type: 'Dog',
+//         age: 3
+//     },
+//     {
+//         name: 'Mr. Salmon',
+//         type: 'Fish',
+//         age: 1
+//     }
+// ];
+//
+// function returnLongestPetName(pet) {
+//     let longest = pet[0].name;
+//     for (let i = 0; i < pet.length; i++) {
+//         if (pet[i].name.length > longest.length) {
+//             longest = pet[i].name
+//         }
+//     }
+//
+//     return longest
+//
+// }
+//
+// let name = returnLongestPetName(pets)
+//
+// console.log(name) // returns 'Mr. Salmon'
 
-        const pets = [
-    {
-        name: 'Sparky',
-        type: 'Fish',
-        age: 4
-    },
-    {
-        name: 'Mr. Pig',
-        type: 'Cat',
-        age: 4
-    },
-    {
-        name: 'Bubba',
-        type: 'Dog',
-        age: 5
-    },
-    {
-        name: 'Beans',
-        type: 'Dog',
-        age: 3
-    },
-    {
-        name: 'Mr. Salmon',
-        type: 'Fish',
-        age: 1
-    }
-];
-
-function returnLongestPetName(pet) {
-    let longest = pet[0].name;
-    for (let i = 0; i < pet.length; i++) {
-        if (pet[i].name.length > longest.length) {
-            longest = pet[i].name
-        }
-    }
-
-    return longest
-
+function returnTrue() {
+    return true
 }
 
-let name = returnLongestPetName(pets)
+function addTwo(num) {
+    return num + 2
+}
 
-console.log(name) // returns 'Mr. Salmon'
+function returnChar(num, string) {
+    return string[num]
+}
+
+function returnArray(arr) {
+    return arr
+}
+
+function returnNumAtIndex(index, arr) {
+    return arr[index];
+}
+
+function newArray() {
+    let createNew = [];
+    return createNew
+}
+
 
 </script>
 

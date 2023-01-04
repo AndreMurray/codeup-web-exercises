@@ -1,6 +1,8 @@
 body {
     font-family: Arial;
-    background-image: url("/image/nerd.jpg");
+    background-image: url("/image/sunset.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
     background-color: silver;
     font-family: "Brush Script MT", cursive;
 

@@ -1,3 +1,12 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 div {
     background-color: gray;
     display: flex;
@@ -6,10 +15,17 @@ div {
 
 ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
     padding-left: 0;
     padding-right: 0;
 
 }
+
+a {
+   display: inline-block;
+}
+
+
 

@@ -394,9 +394,27 @@ function addThree(num) {
 
 // "ie.replaceAll('ei')
 
-function iBeforeE(word) {
-    return word.split('ei').join('ie');
+// function iBeforeE(word) {
+//     return word.split('ei').join('ie');
+// }
+
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+console.log(filterList([1,2,'a','b'])) // returns [1,2]
+console.log( filterList([1,'a','b',0,15])) // returns [1,0,15]
+console.log(filterList([1,2,'aaf','1','2',123])) // returns [1,2,123]
+
+function filterList(array) {
+    let newArray = [];
+    for(let i = 0; i < array.length; i++) {
+        if (typeof array[i] !== "string") {
+            newArray.push(array[i])
+        }
+
+    }
+    return newArray
 }
+
+
 </script>
 
 </form>

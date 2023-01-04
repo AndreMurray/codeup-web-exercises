@@ -1,0 +1,15 @@
+div {
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+

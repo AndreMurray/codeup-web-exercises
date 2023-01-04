@@ -1,5 +1,9 @@
 body {
     font-family: Arial;
+    background-image: url("/image/nerd.jpg");
+    background-color: silver;
+    font-family: "Brush Script MT", cursive;
+
 
 }
 
@@ -11,10 +15,55 @@ body {
 
 .section-header {
     color:blue;
+
+    border-bottom: solid #a54e60;
+
 }
 
 h1.fancy-header {
     text-align: center;
 }
+
+ul {
+    list-style-type: upper-alpha;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* unvisited link */
+a:link {
+    color: purple;
+}
+
+
+a:visited {
+    color: green;
+}
+
+
+a:hover {
+    color: firebrick;
+}
+
+
+a:active {
+    color: blue;
+}
+
+
+
+
+
+
+
 /*Why use rgb to define a CSS color vs. a hex value?*/
 

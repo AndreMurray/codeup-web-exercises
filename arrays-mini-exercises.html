@@ -399,21 +399,216 @@ function addThree(num) {
 // }
 
 // Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
-console.log(filterList([1,2,'a','b'])) // returns [1,2]
-console.log( filterList([1,'a','b',0,15])) // returns [1,0,15]
-console.log(filterList([1,2,'aaf','1','2',123])) // returns [1,2,123]
+// console.log(filterList([1,2,'a','b'])) // returns [1,2]
+// console.log( filterList([1,'a','b',0,15])) // returns [1,0,15]
+// console.log(filterList([1,2,'aaf','1','2',123])) // returns [1,2,123]
+//
+// function filterList(array) {
+//     let newArray = [];
+//     for(let i = 0; i < array.length; i++) {
+//         if (typeof array[i] !== "string") {
+//             newArray.push(array[i])
+//         }
+//
+//     }
+//     return newArray
+// }
 
-function filterList(array) {
-    let newArray = [];
-    for(let i = 0; i < array.length; i++) {
-        if (typeof array[i] !== "string") {
-            newArray.push(array[i])
-        }
+// Create a function, zipArrays, that takes two airray inputs of the same length and returns an array with the elements of both arrays alternating in the order of first[0], second[0], first[1], second[1], etc. If both arrays are empty, return an empty array.
+//
+//
+// zipArrays([], []) // returns []
+// zipArrays([1], [2]) // returns [1, 2]
+// zipArrays(['a', 'b'], ['c', 'd']) // returns... ['a', 'c', 'b', 'd']
+// zipArrays([1,2,'a','b'], ['bob', null, 'sally', 25]) // returns...
 
+// function zipArrays(array1, array2) {
+//     let newArray = [];
+//     if (array1.length === array2.length) {
+//         for (let i = 0; i < array1.length; i++) {
+//             for (let j = 0; j < array2; j++) {
+//                 newArray.push(array1[i], array2[i])
+//             }
+//         }
+//         return newArray
+//     } else if (array1 === [] && array2 === []) {
+//         return []
+//     }
+//
+// }
+//
+// console.log(zipArrays([], []))
+//                 'bob',
+//                 2,
+//                 null,
+//                 'a',
+//                 'sally',
+//                 'b',
+//                 25
+//         ]
+
+// <!DOCTYPE html>
+// <html lang="en">
+//         <head>
+//         <meta charset="UTF-8">
+//         <title>BOM Lecture</title>
+// </head>
+// <body>
+// <h1>BOM Lecture</h1>
+//
+// <script>
+
+    "use strict";
+
+    /*
+    ================================= BROWSER OBJECT MODEL (BOM)
+
+    BOM = hierarchy of objects that make up the browser
+
+    Highest level object: window object
+
+    Main objects nested within the window object:
+
+    document  - a tree of elements of the current page
+    navigator - info about the browser itself
+    location  - info about the current url
+    history   - history of visited url with methods to traverse history
+    screen    - info about the current browser dimensions
+
+    additional information: https://www.w3schools.com/js/js_ex_browser.asp
+
+    Important methods within the window object:
+    Dialogue functions: alert(), confirm(), prompt()
+    setInterval() - starts an interval that can execute a repeated process
+    setTimeout() - starts a timer after which a process may execute
+
+    Location object:
+
+    Redirect to another page or reload the current page
+
+    */
+
+
+
+    /*
+    ================================= setInterval()
+
+    Set interval method:
+
+    Real world application:
+    slide show animation
+    music sequencer
+    AJAX requests
+
+    ** see example **
+    */
+
+    // function sayHello() {
+//     console.log("Justin Reich");
+// }
+//
+// var intervalId = setInterval(sayHello, 3000);
+
+
+
+// create interval to say howdy 10 times
+
+// var interval = 200;
+// var i = 1;
+//
+// var intervalId = setInterval(function(){
+//     if (i === 10) {
+//         clearInterval(intervalId);
+//     }
+//     console.log("Howdy!!!");
+//     ++i;
+// }, interval);
+//
+// console.log(intervalId);
+
+
+/*
+	================================= setTimeout()
+
+		Real world application:
+
+		session time out (online banking)
+		pop up window  -  https://ambitionally.com/popupally/sample-time/
+*/
+
+
+// create pop up ad after 3 seconds
+
+// var x;
+// var wait = 2000;
+//
+// var timeoutId = setTimeout(function() {
+//     alert("You WON $1,000,000.00!!!!");
+//     x = 23;
+//     console.log("The value of x is: " + x);
+// }, wait);
+
+
+// asynchronous errors
+//    console.log(x);
+
+
+
+
+// ================================= Location object
+
+// Redirect
+
+// window.location = "https://www.google.com";
+
+
+// Reload page
+
+// location.reload();
+// location.reload(true);
+
+// let time = 0;
+//
+// setInterval(threeSec, 3000)
+//
+// function threeSec() {
+//     console.log( 1 + time)
+//     time++
+// }
+
+// let count = 0
+// let max = 5
+// let thisSet = setInterval(function () {
+//     if (count >= max) {
+//         clearInterval(thisSet);
+//         console.log('done')
+//     } else {
+//         count++
+//         console.log('NOT.DONE.YET')
+//     }
+// }, 1000)
+
+// let hailMary = 0
+//
+// setInterval(yellItProwd, 1000)
+//
+//
+// function yellItProwd () {
+//     console.log("hail mary!");
+//     hailMary++
+// }
+
+let startCount = 0;
+let stopCount = 10;
+let rocketLaunch = setInterval(function () {
+    if (stopCount >= startCount) {
+        console.log(stopCount)
+        stopCount--
+    } else {
+        clearInterval(rocketLaunch)
+        console.log('lift off, WE HAVE LIFT OFF!')
     }
-    return newArray
-}
-
+}, 1000)
 
 </script>
 

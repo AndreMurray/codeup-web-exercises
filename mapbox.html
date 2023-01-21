@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <link href="./css/resets.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 100%;
+      height: 700px;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <header class="container">
+    <div class="row full-width">
+      <div class="column">
+        YOUR LOGO HERE
+      </div>
+      <div class="column">
+
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row full-width">
+      <aside class="column">
+
+      </aside>
+      <div class="column">
+        <div id='map'></div>
+      </div>
+    </div>
+  </main>
+</div>
+<!--keys-->
+<script src="./js/keys.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<!-- Custom JS -->
+<script>
+  mapboxgl.accessToken = keys.mapbox;
+  let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 12,
+    center: [-98.652577, 29.416715]
+
+  });
+  // let marker = new mapboxgl.Marker()
+  //         .setLngLat([-98.4861, 29.4260])
+  //         .addTo(map);
+
+  // the  geocode method from mapbox-geocoder-utils.js
+  // geocode("8260 Marbach Rd, San Antonio", keys.mapbox).then(function(result) {
+  //   console.log(result);
+  //   map.setCenter(result);
+  //   map.setZoom(15);
+  //   let marker = new mapboxgl.Marker()
+  //           .setLngLat([-98.652577,
+  //             29.416715])
+  //           .addTo(map);
+    // var popup1 = new mapboxgl.Popup()
+    //         .setLngLat([-98.652577, 29.416715])
+    //         .setHTML("<p>La Michoacana Meat Market</p>")
+
+
+  // });
+  let popup1 = new mapboxgl.Popup()
+          .setHTML("<p>La Michoacana Meat Market</p>")
+
+  let popup2 = new mapboxgl.Popup()
+          .setHTML("<p>El Tequila")
+
+  let popup3 = new mapboxgl.Popup()
+          .setHTML("<p>Texas Roadhouse</p>")
+
+  geocode("8260 Marbach Rd, San Antonio", keys.mapbox).then(function(result) {
+    console.log(result);
+    let marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+            .setPopup(popup1);
+  });
+
+  geocode("7628 Marbach Rd, San Antonio", keys.mapbox).then(function(result) {
+    console.log(result);
+    let marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+            .setPopup(popup2);
+  });
+
+  geocode("2893 Cinema Ridge, San Antonio", keys.mapbox).then(function(result) {
+    console.log(result);
+    let marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+            .setPopup(popup3);
+  });
+
+
+  // var popup = new mapboxgl.Popup()
+  //         .setLngLat([-98.652577, 29.416715])
+  //         .setHTML("<p>La Michoacana Meat Market</p>")
+          // .addTo(map)
+
+  // reverseGeocode({lng: -98.4861, lat: 29.4260}, keys.mapbox).then(function(results) {
+  //   // logs the address for The Alamo
+  //   console.log(results);
+  //   map.setCenter(results);
+  //   map.setZoom(20)
+  // });
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 // $.get('https://api.openweathermap.org/data/2.5/forecast', {
 //     lat: 29.4252,
 //     lon: -98.4916,
-//     appid: weatherMapKey.openWeather,
+//     appid: WEATHER_APPID,
 //     units: 'imperial'
 // }).done(function(data) {
 //     // can be used to get forecast conditions at current time in increments of 24 hours
@@ -45,7 +45,7 @@
 
 
 // Map
-mapboxgl.accessToken = keys.mapbox;
+mapboxgl.accessToken = MAPBOX_TOKEN;
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -55,24 +55,36 @@ let map = new mapboxgl.Map({
 
 });
 
+map.on('click', (e) => {
+    $(".mapboxgl-marker").remove();
+    let coordinates = e.lngLat;
+    let newMarker1 = new mapboxgl.Marker().setLngLat(coordinates).addTo(map)
+    console.log(coordinates.lng, coordinates.lat);
+    map.setCenter(coordinates)
+    map.setZoom(8)
+})
+
 //add a trigger event onto the search bar that listens for a keypress of the enter key
 $("#searchbutton").click(function(e) {
     let searchBar = $("#place").val() || 'San Antonio, TX';
-    geocode(searchBar, keys.mapbox)
-        .then(function(result){
-            console.log(result)
-            return result;
-        }).then(function (data) {
+    geocode(searchBar, MAPBOX_TOKEN)
+        // .then(function(result){
+        //     console.log(result)
+        //     return result;
+        // })
+        .then(function (data) {
+            $(".mapboxgl-marker").remove()
+            let newMarker = new mapboxgl.Marker().setLngLat(data).addTo(map);
             //use the flyTo method to move the map to the coordinates of the search bar
             map.flyTo({
                 center: data,
                 zoom: 12
             });
-        });
-    console.log(searchBar)
+            //add a marker to the map at the coordinates of the search bar
+        })
 
     let html = "";
-    $.get("https://api.openweathermap.org/data/2.5/forecast?q="+searchBar+"&appid="+weatherMapKey.openWeather+"",
+    $.get("https://api.openweathermap.org/data/2.5/forecast?q="+searchBar+"&appid="+WEATHER_APPID+"",
         {units: "imperial",}
     ).done(function(data) {
         console.log(data)
@@ -111,7 +123,6 @@ $("#searchbutton").click(function(e) {
 
 
 });
-
 $('#place').keypress(function(e) {
     // if the key pressed is the enter key
     // trigger the click event on the search button

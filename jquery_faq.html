@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery_faq</title>
+	<link rel="stylesheet" href="./css/Jquery_faq.css">
+</head>
+<body>
+	<dl>
+		<dt>What is the only state to not have a national park?</dt>
+		<dd>Delaware is the only state in the country that does not have a national park, monument, national historic site</dd>
+
+		<dt>Biggest National park in the country?</dt>
+		<dd>Elias National Park & Preserve.</dd>
+
+		<dt>What is the most unpopular national park?</dt>
+		<dd>Gates of the Arctic National Park and Preserve</dd>
+
+		<dt>What state has the most National Parks?</dt>
+		<dd>California with 8.</dd>
+
+		<dt>How many National Parks are in the USA?</dt>
+		<dd>The National Park system encompasses 423 national park sites.</dd>
+
+		<dt>What is the most beautiful National park?</dt>
+		<dd>The Grand Canyon.</dd>
+
+		<dt>What National Park is in four states?</dt>
+		<dd>Four Corners Monument.</dd>
+
+		<dt>Who started the National Park system?</dt>
+		<dd>Theodore Roosevelt.</dd>
+
+		<dt>What is the first National Park ever made?</dt>
+		<dd>Yellowstone National Park.</dd>
+
+		<dt>What is New Mexico's newest National Park?</dt>
+		<dd>White Sands National Park.</dd>
+	</dl>
+
+	how to make an ancor link to the top of the page
+	<a href="#">Wax on, Was off.</a>
+
+
+	<script src="./js/jquery-3.6.3.js"></script>
+	<script>
+        $('document').ready(() => {
+        	$('dd').addClass('invisible');
+        	$("a").click(() => {
+            $("dd").toggleClass('invisible');
+        })
+        });
+
+
+	</script>
+</body>
+</html>

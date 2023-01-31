@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom practice</title>
+</head>
+<body>
+
+<button>boop</button>
+<script>
+  let boop = document.querySelector("button")
+  console.log(boop)
+  //how to change the background color to red using boop
+    boop.addEventListener("click", () => {
+        document.querySelector("body").style.backgroundColor = "red"
+    })
+
+</script>
+</body>
+</html>

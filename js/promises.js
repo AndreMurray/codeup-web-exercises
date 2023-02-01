@@ -17,35 +17,35 @@
     //
     //     });
 
-async function getRepos(username) {
-    let response = await fetch(`https://api.github.com/users/AndreMurray/events/public`);
-    let data = await response.json();
-    console.log( data[0]['created_at'])
+// async function getRepos(username) {
+//     let response = await fetch(`https://api.github.com/users/AndreMurray/events/public`);
+//     let data = await response.json();
+//     console.log( data[0]['created_at'])
+//
+// }
 
+// getRepos("")
+
+
+
+function getLastCommitDate(username) {
+    return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${GIT_API}`}})
+        .then(data => data.json())
+        .then(data => {
+            let pushEvents = data.filter(event => event.type = "pushEvent");
+            let mostRecentPush = pushEvents[0];
+            let dateObj = mostRecentPush.created_at;
+            return new  Date(dateObj).toLocaleString()
+        })
 }
 
-getRepos("")
-
-
-
-//The setInterval() method allows code to be executed at a specified time interval. The specified code will continue executing at the given interval until the method clearInterval() is called.
-
+getLastCommitDate("AndreMurray").then((data) => {
+    console.log(data)
+})
 
 
 
 
 
-// var count = 0;
-// var max = 10;
-// var interval = 1000; // interval time in milliseconds
-//
-// var intervalId = setInterval(function () {
-//     if (count >= max) {
-//         clearInterval(intervalId);
-//         console.log('All done');
-//     } else {
-//         count++;
-//         console.log('Repeating this line ' + count);
-//     }
-// }, interval);
+
 

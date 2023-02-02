@@ -32,6 +32,7 @@ function getLastCommitDate(username) {
     return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${GIT_API}`}})
         .then(data => data.json())
         .then(data => {
+            console.log(data)
             let pushEvents = data.filter(event => event.type = "pushEvent");
             let mostRecentPush = pushEvents[0];
             let dateObj = mostRecentPush.created_at;

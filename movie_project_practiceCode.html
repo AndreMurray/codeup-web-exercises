@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movies App</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap"
+          rel="stylesheet"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+<div class="pagewrapper">
+  <header class="header">
+    <h1 id="h1id" class="main-heading">Bootleggers Movie Emporium</h1>
+  </header>
+  <button class="add-btn">Add Movie</button><br />
+  <main id="main" class="main">
+            <div id="movieHeader">
+              <label for="searchBar">Search</label>
+              <input type="search" id="searchBar" data-search>
+              <button class="add-btn">Add Movie</button><br />
+            </div>
+<!--            display search Andre Start-->
+
+              <div class="user-card" data-user-card-container></div>
+            <template data-user-template>
+                <div class="cardMini ">
+                  <div class="title" data-title></div>
+                  <div class="date" data-date></div>
+                  <div class="sentance" data-director></div>
+                  <div class="pic" data-pic></div>
+                  <button class="btn" id=""  type="button" data-button data-id>Details</button>
+                </div>
+            </template>
+<!--     Add Movie Form-->
+    <div class="add-movie-form form hidden">
+      <div>
+        <label class="label" for="title">"Movie Title:"</label>
+        <input type="text" id="title" />
+      </div>
+      <div>
+        <label class="label" for="year">Year:</label>
+        <input type="text" id="year" />
+      </div>
+      <div>
+        <label class="label" for="director">Director(s):</label>
+        <input type="text" id="director" />
+      </div>
+      <div>
+        <label class="label" for="rating">Rating:</label>
+        <input type="number" id="rating" />
+      </div>
+      <div>
+        <label class="label" for="genre">Genre:</label>
+        <input type="text" id="genre" />
+      </div>
+      <div>
+        <label class="label" for="run-time">Run-time:</label>
+        <input type="text" id="run-time" />
+      </div>
+      <div>
+        <label class="label" for="actors">Actors:</label>
+        <input type="text" id="actors" />
+      </div>
+      <div>
+        <label class="label" for="image">Image:</label>
+        <input type="text" id="image" />
+      </div>
+      <div>
+        <label class="label" for="text-area">Description:</label>
+        <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="5"
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit" id="btn-submit">Submit</button>
+      </div>
+    </div>
+
+    <!-- Update Movie Form -->
+    <div class="update-movie-form form hidden">
+      <div>
+        <label class="label" for="title">Movie Title:</label>
+        <input type="text" id="title-update" />
+      </div>
+      <div>
+        <label class="label" for="year">Year:</label>
+        <input type="text" id="year-update" />
+      </div>
+      <div>
+        <label class="label" for="director">Director(s):</label>
+        <input type="text" id="director-update" />
+      </div>
+      <div>
+        <label class="label" for="rating">Rating:</label>
+        <input type="number" id="rating-update" />
+      </div>
+      <div>
+        <label class="label" for="genre">Genre(s):</label>
+        <input type="text" id="genre-update" />
+      </div>
+      <div>
+        <label class="label" for="run-time">Run-time:</label>
+        <input type="text" id="run-time-update" />
+      </div>
+      <div>
+        <label class="label" for="actors">Actors:</label>
+        <input type="text" id="actors-update" />
+      </div>
+      <div>
+        <label class="label" for="image">Image:</label>
+        <input type="text" id="image-update" />
+      </div>
+      <div>
+        <label class="label" for="text-area">Description:</label>
+        <textarea
+                name="description"
+                id="description-update"
+                cols="30"
+                rows="5"
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit" id="btn-submit-update">Submit</button>
+      </div>
+    </div>
+
+    <!-- Movies on page load -->
+    <div class="content content-load">
+      <!-- <div class="cards card1">
+		<div class="movie-image"></div>
+		<div class="card-content">
+		  <p class="rating"><span class="star">⭐️</span>9.5</p>
+		  <p class="title">Matrix</p>
+		</div>
+		<div class="btn-options">
+		  <button clas="btn-options" type="button">Options</button>
+		</div>
+	  </div>
+	  <div class="cards card2">
+		<div class="movie-image"></div>
+		<div class="card-content">
+		  <p class="rating"><span class="star">⭐️</span>9.0</p>
+		  <p class="title">Step Brothers</p>
+		</div>
+		<div class="btn-options">
+		  <button clas="btn-options" type="button">Options</button>
+		</div>
+	  </div>
+	  <div class="cards card3">
+		<div class="movie-image"></div>
+		<div class="card-content">
+		  <p class="rating"><span class="star">⭐️</span>10</p>
+		  <p class="title">I.T.</p>
+		</div>
+		<div class="btn-options">
+		  <button clas="btn-options" type="button">Options</button>
+		</div>
+	  </div> -->
+    </div>
+
+    <!-- Hidden/Movie Detail Card-->
+    <div class="content-detail hidden" id="hidden">
+      <!-- <div class="upper-card">
+		<div class="detail-image"></div>
+		<div class="detail-content">
+		  <h4 class="detail-title">Matrix</h4>
+		  <div class="stats">
+			<p class="date">Feb. 2, 1999</p>
+			<p class="run-time">3hrs</p>
+			<p class="category">Action</p>
+		  </div>
+		  <button id="btn-close" data-moveId="this-di">Close</button>
+		</div>
+	  </div>
+	  <div class="lower-card">
+		<div class="description">
+		  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+		  sequi ex natus dicta error facere repudiandae sit illo voluptatem
+		  dolor modi earum iusto magnam saepe, dolore ab excepturi ipsum
+		  nobis.
+		</div>
+		<div class="director">Andre</div>
+		<div class="rating">5 stars</div>
+	  </div> -->
+    </div>
+  </main>
+  <div id="movie"></div>
+</div>
+<!--  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- The core Firebase JS SDK and Databse library -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+
+<!-- A local JS file to store the firebase API Key. WARNING: Do not commit this file -->
+<script src="js/keys.js"></script>
+
+<!-- Utilities and higher level functions to simplify database fetches -->
+<script src="js/firebase-config.js"></script>
+
+<!-- Your local JS file to add functions that interact with the database -->
+<script src="js/movies-api.js"></script>
+
+<!-- JQuery -->
+
+<!-- Your local JS file to add functions that USE your functions from movies-api.js
+and INTERACT with the DOM -->
+<script src="js/index.js"></script>
+</body>
+</html>

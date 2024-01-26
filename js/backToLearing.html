@@ -2,11 +2,53 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Table of Contents</title>
+	<title>Flexbox Basics Examples</title>
+	<style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Helvetica,serif;
+            font-weight: bold;
+        }
+        .flex-container {
+			display: flex;
+            width: 100%;
+            border: 3px solid goldenrod;
+        }
+        .flex-item {
+            background: #BFD45D;
+			flex-grow: 1;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+			order: -2;
+        }
+		.flex-item1 {
+			background: #BFD45D;
+            border: 2px solid #F9EFD6;
+			padding: 1em;
+			flex: 1;
+			order: 2;
+		}
+		.flex-item2 {
+			background: #BFD45D;
+            border: 2px solid #F9EFD6;
+			padding: 1em;
+			flex: 2;
+			order: 0;
+		}
+	</style>
 </head>
 <body>
-<h2>Introduction</h2>
-<p>We'll.. create more content later...</p>
+<h1>My First Heading...again!</h1>
+<p>my first paragraph</p>
+
+<div class="flex-container">
+	<div class="flex-item1">Item 1</div>
+	<div class="flex-item2">Item 2</div>
+	<div class="flex-item">Item 3</div>
+</div>
 
 </body>
 </html>
